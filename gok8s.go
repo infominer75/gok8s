@@ -43,7 +43,7 @@ func main() {
 	clientset, err := kubernetes.NewForConfig(config)
 	if err != nil {
 		panic(err.Error())
-	}
+	
 
 	namespace := "openfaas-fn"
 	pods, err := clientset.CoreV1().Pods(namespace).List(metav1.ListOptions{})
